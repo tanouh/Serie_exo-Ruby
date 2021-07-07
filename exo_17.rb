@@ -1,8 +1,12 @@
 puts "Bonjour, bienvenue dans ma super pyramide ! Combien d'étages veux-tu?"
 etage = gets.chomp.to_i
-puts "Voici la pyramide :"
-etage.times do |i|
-    str = "#"*(2*i+1)
-    espace = " "*(etage - i)
-    puts espace+str+"\n"
+if etage <=25 && etage > 0
+    puts "Voici la pyramide :"
+    etage.times do |i|
+        str = "#"*(2*i+1)
+        espace = " "*(etage - i)
+        puts espace+str+"\n"
+    end
+else 
+    puts "Valeur invalide. Faîtes en sorte que le nombre soit entre 1 et 25."
 end
